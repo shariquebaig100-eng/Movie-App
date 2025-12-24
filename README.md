@@ -1,12 +1,17 @@
 # 🎬 MERN Stack Movie Application (Role-Based Access Control)
 
-A full-stack Movie Management Web Application built using the **MERN stack** with **JWT authentication**, **role-based access control**, and **IMDb Top 250 movie integration**.
+A full-stack **MERN Movie Application** with **JWT Authentication**, **Role-Based Access Control**, **Admin CRUD**, **Search & Sort**, and **IMDb Top 250 integration**.  
+Frontend built with **React + Material UI**, Backend with **Node.js + Express**, Database **MongoDB Atlas**.
 
 ---
 
-## 🚀 Live Demo
-- Frontend: _To be added_
-- Backend API: _To be added_
+## 🌐 Live URLs
+
+### 🔗 Frontend (Vercel)
+👉 https://movie-app-tau-rouge.vercel.app
+
+### 🔗 Backend API (Railway)
+👉 https://movie-app-production-cdfd.up.railway.app
 
 ---
 
@@ -16,48 +21,63 @@ A full-stack Movie Management Web Application built using the **MERN stack** wit
 - View all movies with pagination
 - Search movies by title or description
 - Sort movies by:
-  - Name
   - Rating
+  - Name
   - Release Date
   - Duration
-- Responsive UI using Material-UI
-- Skeleton loaders for better UX
+- Responsive UI with Material-UI
+- Loading skeletons for better UX
 
 ### 🛠 Admin Features
-- Secure admin login
+- Secure login (JWT based)
 - Add new movies
 - Edit existing movies
 - Delete movies
-- Sync IMDb Top 250 movies (admin only)
-
-### 🔐 Authentication & Authorization
-- JWT-based authentication
-- Role-based access control (User / Admin)
-- Protected admin routes
+- IMDb Top 250 movie sync (admin only)
 
 ---
 
-## 🧰 Tech Stack
+## 🔐 Authentication & Authorization
+
+- JWT based authentication
+- Role based access control
+- Protected admin routes
+- Token stored securely in browser
+- Auto logout on token expiry
+
+---
+
+## 🧱 Tech Stack
 
 ### Frontend
-- React.js (Vite)
+- React (Vite)
 - Material-UI (MUI)
 - React Router DOM
 - Axios
-- Context API
-- react-hot-toast
+- React Hot Toast
 
 ### Backend
 - Node.js
 - Express.js
-- MongoDB (Atlas)
+- MongoDB Atlas
 - Mongoose
 - JWT
-- bcryptjs
-- Bull Queue (for background jobs)
+- Bcrypt
+
+### Deployment
+- **Frontend** → Vercel
+- **Backend** → Railway
+- **Database** → MongoDB Atlas
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
+## 🎞 IMDb Top 250 Integration (Note)
 
+The application includes backend logic to fetch and store IMDb Top 250 movies using the official IMDb API.
+
+The integration has been tested locally and works as expected.  
+However, in the production environment, outbound requests to `imdb-api.com` are blocked due to hosting network/DNS restrictions, so automatic syncing is not executed in production.
+
+This is an environment-level limitation, not a code-level issue.
